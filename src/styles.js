@@ -118,7 +118,7 @@ export const HamburgerIcon = styled.div`
   }
 
   @media (max-width: 768px) {
-    display: flex; /* Mostra o ícone no mobile */
+    display: block; /* Mostra o ícone no mobile */
   }
 `;
 
@@ -127,15 +127,18 @@ export const MobileMenu = styled.div`
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')}; /* Mostra ou esconde o menu */
   flex-direction: column;
   width: 100%;
+  height: 100%;
+  color: #ecf0f1;
   background-color: #2c3e50;
   position: absolute;
-  top: 60px;
+  top: 60px; /* Ajuste conforme a altura da Navbar */
   left: 0;
   z-index: 1000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  padding: 10px 0; /* Adiciona espaçamento interno */
 
-  a {
+  ${NavLink} {
     padding: 15px 20px;
     color: #ecf0f1;
     text-decoration: none;
@@ -147,8 +150,8 @@ export const MobileMenu = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
-    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')}; /* Mostra o menu móvel no mobile */
+  @media (min-width: 769px) {
+    display: none; /* Esconde o menu móvel em telas maiores */
   }
 `;
 
