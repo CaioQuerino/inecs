@@ -6,4 +6,5 @@
 body {
   background-color:rgba(114, 120, 128, 0.56);
   font-family: 'Roboto', sans-serif;
+  display: grid;
 }
