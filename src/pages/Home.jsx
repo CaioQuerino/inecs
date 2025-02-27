@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importando o Link para navegação interna
 import { HomeContainer, SubmitButton } from '../styles.js'; // Importando estilos
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 export function Home() {
   return (
     <HomeContainer>
+      <SpeedInsights />
+
       <h1>Bem-vindo ao INECS - Instituto de Desenvolvimento Social</h1>
       <p>
         O INECS está comprometido com o desenvolvimento social e a inclusão através de diversos projetos e cursos que visam transformar vidas e comunidades.
